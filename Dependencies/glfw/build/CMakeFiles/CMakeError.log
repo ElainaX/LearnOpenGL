@@ -1,0 +1,63 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: D:/InterestingProgramming/openGL/OpenGLLearningII/OpenGLLearningII/Dependencies/glfw/build/CMakeFiles/CMakeScratch/TryCompile-aqo2s4
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_16f92.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30141 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  src.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_16f92.dir\Debug\\" /Fd"cmTC_16f92.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\build\CMakeFiles\CMakeScratch\TryCompile-aqo2s4\src.c"
+D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\build\CMakeFiles\CMakeScratch\TryCompile-aqo2s4\src.c(1,10): fatal error C1083: 无法打开包括文件: “pthread.h”: No such file or directory [D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\build\CMakeFiles\CMakeScratch\TryCompile-aqo2s4\cmTC_16f92.vcxproj]
+
+
+Source file was:
+#include <pthread.h>
+
+static void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_cancel(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: D:/InterestingProgramming/openGL/OpenGLLearningII/OpenGLLearningII/Dependencies/glfw/build/CMakeFiles/CMakeScratch/TryCompile-xmntjh
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8059f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30141 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8059f.dir\Debug\\" /Fd"cmTC_8059f.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\build\CMakeFiles\CMakeScratch\TryCompile-xmntjh\CheckFunctionExists.c"
+LINK : fatal error LNK1104: 无法打开文件“pthreads.lib” [D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\build\CMakeFiles\CMakeScratch\TryCompile-xmntjh\cmTC_8059f.vcxproj]
+
+
+
+Determining if the function pthread_create exists in the pthread failed with the following output:
+Change Dir: D:/InterestingProgramming/openGL/OpenGLLearningII/OpenGLLearningII/Dependencies/glfw/build/CMakeFiles/CMakeScratch/TryCompile-sjfqkb
+
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_8ca99.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && 用于 .NET Framework 的 Microsoft (R) 生成引擎版本 16.11.2+f32259642
+版权所有(C) Microsoft Corporation。保留所有权利。
+
+  用于 x64 的 Microsoft (R) C/C++ 优化编译器 19.29.30141 版
+  版权所有(C) Microsoft Corporation。保留所有权利。
+  CheckFunctionExists.c
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8ca99.dir\Debug\\" /Fd"cmTC_8ca99.dir\Debug\vc142.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\build\CMakeFiles\CMakeScratch\TryCompile-sjfqkb\CheckFunctionExists.c"
+LINK : fatal error LNK1104: 无法打开文件“pthread.lib” [D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\build\CMakeFiles\CMakeScratch\TryCompile-sjfqkb\cmTC_8ca99.vcxproj]
+
+
+

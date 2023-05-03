@@ -1,0 +1,10 @@
+^D:\INTERESTINGPROGRAMMING\OPENGL\OPENGLLEARNINGII\OPENGLLEARNINGII\DEPENDENCIES\GLFW\BUILD\CMAKEFILES\E33D9CADCBE648D7A23174A72ADE9279\GENERATE.STAMP.RULE
+setlocal
+D:\Tools\CMake\bin\cmake.exe -SD:/InterestingProgramming/openGL/OpenGLLearningII/OpenGLLearningII/Dependencies/glfw -BD:/InterestingProgramming/openGL/OpenGLLearningII/OpenGLLearningII/Dependencies/glfw/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file D:/InterestingProgramming/openGL/OpenGLLearningII/OpenGLLearningII/Dependencies/glfw/build/GLFW.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

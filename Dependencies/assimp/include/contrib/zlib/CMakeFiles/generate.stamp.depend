@@ -1,0 +1,10 @@
+# CMake generation dependency list for this directory.
+D:/Edge浏览器下载/assimp-master/assimp-master/contrib/zlib/CMakeLists.txt
+D:/Edge浏览器下载/assimp-master/assimp-master/contrib/zlib/zconf.h.cmakein
+D:/Edge浏览器下载/assimp-master/assimp-master/contrib/zlib/zlib.pc.cmakein
+D:/Tools/CMake/share/cmake-3.25/Modules/CheckCSourceCompiles.cmake
+D:/Tools/CMake/share/cmake-3.25/Modules/CheckFunctionExists.cmake
+D:/Tools/CMake/share/cmake-3.25/Modules/CheckIncludeFile.cmake
+D:/Tools/CMake/share/cmake-3.25/Modules/CheckIncludeFileCXX.cmake
+D:/Tools/CMake/share/cmake-3.25/Modules/CheckTypeSize.cmake
+D:/Tools/CMake/share/cmake-3.25/Modules/Internal/CheckSourceCompiles.cmake

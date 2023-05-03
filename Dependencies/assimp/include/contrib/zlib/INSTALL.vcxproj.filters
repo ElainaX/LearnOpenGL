@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="D:\Edge浏览器下载\assimp-master\assimp-master\build\CMakeFiles\3a3ef1f26d78fdb0c3a94728f3c18273\INSTALL_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{14F5179A-E00C-3D0A-B561-BC96A6852062}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

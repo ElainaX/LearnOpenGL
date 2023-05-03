@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\examples\offscreen.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\deps\glad_gl.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\deps\glad\gl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\examples\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="D:\InterestingProgramming\openGL\OpenGLLearningII\OpenGLLearningII\Dependencies\glfw\examples\glfw.rc">
+      <Filter>Source Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A6320407-844F-38A4-9CE3-8C496E690849}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{02F548E1-9B23-362B-B2AE-9DE51DD26D8B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
