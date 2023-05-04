@@ -11,6 +11,7 @@ class Renderer
 public:
 	static void render(const VertexArray& vao, const IndexBuffer& ibo, const ShaderProgram& shader)
 	{
+
 		vao.Bind();
 		ibo.Bind();
 		shader.Use();

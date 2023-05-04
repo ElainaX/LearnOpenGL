@@ -1,19 +1,40 @@
 #pragma once
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
+#include <GLFW/glfw3native.h>
+
+#include "glm/glm.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/type_ptr.hpp"
+
 #include <iostream>
 #include <fstream>
+#include <cmath>
+
 #include "VertexArray.h"
 #include "IndexBuffer.h"
 #include "ShaderProgram.h"
 #include "Renderer.h"
+#include "Camera.h"
+
+
+void mouse_callback(GLFWwindow* window, double xpos, double ypos);
 
 class Window
 {
+	friend void mouse_callback(GLFWwindow* window, double xpos, double ypos);
+
 public:
 
 	Window(GLFWwindow* window = nullptr)
-		: m_Window(window) {}
+		: m_Window(window) {
+	}
+
+	Window(const Window& w)
+		: m_Window(w.m_Window)
+	{
+
+	}
 
 	GLFWwindow* getWindowPtr()
 	{
@@ -26,7 +47,7 @@ public:
 		glClear(GL_COLOR_BUFFER_BIT);
 	}
 
-	void setView(int width, int height)
+	void setView(unsigned int width = 800, unsigned int height = 600)
 	{
 		glViewport(0, 0, width, height);
 	}
@@ -36,23 +57,11 @@ public:
 		glfwSetFramebufferSizeCallback(m_Window, resizeFunc);
 	}
 
-	void Run(const VertexArray& vao, const IndexBuffer& ibo, ShaderProgram& shader)
-	{
+	void setMouseCallback();
 
-		while (!glfwWindowShouldClose(m_Window))
-		{
-			ProcessInput();
-			
-			Renderer::render(vao, ibo, shader);
+	void setScrollCallback();
 
-			//Render();
-			//glDrawArrays(GL_TRIANGLES, 0, 3);
-
-			glfwPollEvents(); // poll means ̽ѯ
-			glfwSwapBuffers(m_Window);
-		}
-	}
-private:
+public:
 	void ProcessInput();
 	void Render()
 	{
@@ -60,6 +69,12 @@ private:
 		glDrawArrays(GL_TRIANGLES, 0, 3);
 	}
 
+	glm::mat4 GenerateViewMat();
+
+private:
+
+
 private:
 	GLFWwindow* m_Window;
+
 };

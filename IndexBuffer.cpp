@@ -9,7 +9,16 @@ IndexBuffer::IndexBuffer(const void* indexData, unsigned int count) : m_Count(co
 
 IndexBuffer::~IndexBuffer()
 {
-	glDeleteBuffers(1, &m_IBO);
+	if(m_IBO != 0) glDeleteBuffers(1, &m_IBO);
+}
+
+void IndexBuffer::Assign(const void* indexData, unsigned int count)
+{
+	if (m_IBO != 0) glDeleteBuffers(1, &m_IBO);
+	m_Count = count;
+	glGenBuffers(1, &m_IBO);
+	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_IBO);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, count * sizeof(unsigned int), indexData, GL_STATIC_DRAW);
 }
 
 void IndexBuffer::Bind() const
